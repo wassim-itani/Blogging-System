@@ -1,0 +1,14 @@
+@import "../../../scss/variables";
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 0.5rem;
+}
+.no-results-text,.error-text {
+  margin-top: 0.5rem;
+  color: $black;
+  font-size: $font-md;
+  font-weight: 500;
+}

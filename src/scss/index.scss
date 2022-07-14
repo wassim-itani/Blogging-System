@@ -1,0 +1,50 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+  background-color: $gray;
+
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  &::-webkit-scrollbar {
+    width:10px;
+    &-thumb {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+h1,
+h2 {
+  color: $black;
+}
+
+ul:not(.single-post-content ul),
+ol:not(.single-post-content ol) {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.52;
+}
+
+img {
+  object-fit: cover;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - (4.0625rem + 8rem));
+  overflow: auto; //prevent adjoining margins
+}

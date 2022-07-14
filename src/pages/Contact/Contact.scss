@@ -1,0 +1,61 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.contact {
+  max-width: 58.75rem;
+  margin: 0.9375rem auto 0;
+  padding: 1.25rem;
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+
+  @include miniLaptop {
+    margin: 0;
+    border:0;
+    border-radius: 0;
+  }
+
+  &-title {
+    margin-bottom: 1rem;
+    font-size: $font-xlg;
+    font-weight: 900;
+
+    @include laptop{
+      font-size:$font-lg;
+    }
+    @include tablet {
+      font-size: $font-xxxmd;
+    }
+  }
+
+  &-text {
+    color: $black;
+    margin-bottom: 1.25rem;
+    font-size: $font-xmd;
+
+    @include laptop{
+      font-size:$font-md;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-item {
+    color: $black;
+    font-size: $font-xmd;
+    @include laptop{
+      font-size:$font-md;
+    }
+  }
+
+  &-link {
+    color: $dark-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

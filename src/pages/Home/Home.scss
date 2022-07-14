@@ -1,0 +1,48 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.home {
+  padding: 0.9375rem 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 15.625rem 38rem;
+    gap: 40px;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+
+    @include miniLaptop{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-aside {
+    align-self: flex-start;
+    background-color: $white;
+    padding: 0.75rem;
+    border:1px solid $light-gray;
+    border-radius: 5px;
+
+    @include miniLaptop{
+      display: none;
+    }
+
+    &-brand {
+      color: $dark-blue;
+    }
+
+    &-text {
+      margin-bottom: 1rem;
+      color: $black;
+      font-size: $font-xmd;
+      font-weight: 700;
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.about {
+  max-width: 58.75rem;
+  margin: 0.9375rem auto;
+  padding: 1.25rem;
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+
+  @include miniLaptop {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  &-img {
+    width: 100%;
+    max-height: 23rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  &-title {
+    margin-bottom: 0.625rem;
+    font-size: $font-xlg;
+    font-weight: 900;
+    @include laptop {
+      font-size: $font-lg;
+    }
+
+    @include tablet {
+      font-size: $font-xxxmd;
+    }
+  }
+
+  &-text {
+    margin-bottom: 1rem;
+    color: $black;
+    font-size: $font-xmd;
+    &:last-of-type {
+      margin-bottom: 0rem;
+    }
+    @include laptop {
+      font-size: $font-md;
+    }
+  }
+}

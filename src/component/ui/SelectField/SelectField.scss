@@ -1,0 +1,23 @@
+@import "../../../scss/variables";
+
+select {
+  padding: 0.25rem;
+  font-size: inherit;
+  font-family: inherit;
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dark-gray;
+  }
+
+  &:focus {
+    border-color: $dark-blue;
+  }
+  option {
+    color: $black;
+  }
+}
+

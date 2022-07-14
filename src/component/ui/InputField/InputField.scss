@@ -1,0 +1,31 @@
+@import "../../../scss/variables";
+
+label,
+input {
+  color: $black;
+  font-family: inherit;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 0.25rem;
+  font-size: inherit;
+  outline: none;
+
+  &:not([type="file"]) {
+    border: 2px solid $light-gray;
+    border-radius: 5px;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      border-color: $dark-gray;
+    }
+
+    &:focus {
+      border-color: $dark-blue;
+    }
+  }
+}

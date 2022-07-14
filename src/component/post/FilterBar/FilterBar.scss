@@ -1,0 +1,48 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0.75rem 0;
+
+  @include miniLaptop{
+    padding-top:0;
+  }
+
+  @include mobile{
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+  }
+
+  &-right,
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &-right{
+    label{
+      font-size: $font-md;
+    }
+  }
+
+  &-btn {
+    color: $dark-gray;
+    font-size: $font-md;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: $dark-blue;
+    }
+
+    &.active {
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}

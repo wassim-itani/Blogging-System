@@ -1,0 +1,54 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.search-bar {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+  width: 100%;
+  max-width: 80rem;
+  padding: 1.25rem;
+  background-color: $white;
+  border-top: 1px solid $light-gray;
+  transform: translateX(-50%);
+  animation: reveal 0.25s ease-in-out;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-form {
+    position: reltative;
+    width: 100%;
+    font-size: $font-xmd;
+    @include tablet {
+      font-size: $font-md;
+    }
+  }
+
+  input {
+    padding: 0;
+    width: 100%;
+    background-color: inherit;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $dark-gray;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 1.25rem;
+    right: 2rem;
+    color: $dark-gray;
+    &:hover {
+      color: $dark-blue;
+    }
+    cursor: pointer;
+  }
+}

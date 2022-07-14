@@ -1,0 +1,63 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.post {
+  max-width: 58.75rem;
+  margin: 0.9375rem auto;
+  padding: 1.25rem;
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+
+  @include miniLaptop {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  &-title {
+    margin-bottom: 1.25rem;
+    color: $black;
+    font-size: $font-lg;
+    @include laptop {
+      font-size: $font-xxxmd;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      input:not([type="file"]),
+      select {
+        flex: 1;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        input:not([type="file"]),
+        select {
+          align-self: stretch;
+        }
+      }
+    }
+
+    .btn {
+      align-self: flex-start;
+    }
+  }
+  &-prev-img {
+    color: $black;
+
+    &-link {
+      color: $dark-blue;
+    }
+  }
+}

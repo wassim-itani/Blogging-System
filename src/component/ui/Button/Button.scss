@@ -1,0 +1,40 @@
+@import "../../../scss/variables";
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &-ghost {
+    color: $dark-gray;
+    background-color: transparent;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: $light-gray;
+    }
+  }
+
+  &-filled {
+    background-color: $dark-blue;
+    color: $white;
+    font-weight: 500;
+    border: 1px solid $dark-blue;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: transparent;
+    }
+  }
+}

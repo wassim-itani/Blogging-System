@@ -1,0 +1,195 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 4.0625rem;
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &-btn {
+    display: none;
+    font-size: $font-md;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &-brand {
+    padding: 0.625rem;
+    background-color: $black;
+    color: $white;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+
+  &-menu {
+    display: flex;
+    gap: 25px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-link {
+    color: $dark-gray;
+    transition: 0.2s ease-in-out;
+
+    &.active,
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
+  &-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include tablet {
+      & > a:first-of-type {
+        display: none;
+      }
+    }
+  }
+
+  &-searchIcon {
+    font-size: $font-xmd;
+    fill: $dark-gray;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    @include tablet {
+      font-size: $font-md;
+    }
+
+    &:hover {
+      fill: $dark-blue;
+    }
+  }
+
+  &-img {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &-username {
+    color: $dark-gray;
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: 2.5rem;
+    right: 4rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width:7.625rem;
+    padding: 0.625rem 0.9375rem;
+    background-color: $white;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.25s ease-in-out;
+
+    &.active {
+      transform: scaleY(1);
+    }
+
+    &-link {
+      color: $dark-gray;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: $dark-blue;
+      }
+    }
+
+    &-divider {
+      height: 0.125rem;
+      background-color: $light-gray;
+    }
+  }
+
+  &-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+
+    &.show {
+      left: 0;
+    }
+
+    @include tablet {
+      display: block;
+    }
+
+    &-content {
+      width: 60%;
+      height: 100%;
+      background-color: $white;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.125rem;
+      border-bottom: 1px solid $light-gray;
+      height: 4.0625rem;
+    }
+
+    &-brand {
+      color: $black;
+      font-size: $font-md;
+      font-weight: 700;
+    }
+
+    &-closeBtn {
+      font-size: $font-md;
+      fill: $dark-gray;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 1.125rem;
+      & a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

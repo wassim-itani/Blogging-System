@@ -1,0 +1,26 @@
+@import "./variables";
+
+
+@mixin laptop { 
+    @media screen and (max-width:$bp-lg) {
+        @content;
+    }
+}
+
+@mixin miniLaptop { 
+    @media screen and (max-width:$bp-md) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:$bp-sm) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width:$bp-xsm) {
+        @content;
+    }
+}

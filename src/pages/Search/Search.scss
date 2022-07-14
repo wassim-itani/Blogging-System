@@ -1,0 +1,57 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.search-results {
+  max-width: 64rem;
+  margin: 0.9375rem auto;
+  padding: 1.25rem;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  background-color: $white;
+
+  @include laptop {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  &-title {
+    margin-bottom: 1rem;
+    color: $black;
+    font-size: $font-xlg;
+    font-weight: 900;
+    @include laptop {
+      font-size: $font-lg;
+    }
+
+    @include tablet {
+      font-size: $font-xxxmd;
+    }
+  }
+
+  &-count {
+    color: $black;
+    font-size: $font-xmd;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .post-link-img {
+    height: 12rem;
+    @include tablet {
+      height: 15rem;
+    }
+    @include mobile{
+      height:11rem;
+    }
+  }
+}
